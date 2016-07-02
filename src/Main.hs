@@ -7,3 +7,5 @@ main = do
   putStrLn " "
   putStrLn "TRY YOUR HAND AT GOVERNING ANCIENT SUMERIA"
   putStrLn "FOR A TEN-YEAR TERM OF OFFICE."
+  line <- getLine -- line :: String
+  putStrLn ("you said: " ++ line)
