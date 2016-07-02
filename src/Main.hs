@@ -1,5 +1,13 @@
 module Main where
 
+turn' :: t -> t -> [t]
+turn' a b = [a, b]
+
+-- promptLine :: String -> IO String
+-- promptLine prompt = do
+--     putStr prompt
+--     getLine
+
 main :: IO ()
 main = do
   putStrLn "HAMURABI"
@@ -7,10 +15,13 @@ main = do
   putStrLn " "
   putStrLn "TRY YOUR HAND AT GOVERNING ANCIENT SUMERIA"
   putStrLn "FOR A TEN-YEAR TERM OF OFFICE."
-  line <- getLine -- line :: String
-  putStrLn ("you said: " ++ line)
+  line <- getLine
+  putStrLn ("FOR A " ++ line ++ " TERM")
+  print (turn' 1 2)
 
-  -- D1=0   -- people died
+
+
+  -- D1=0   -- people died total ???
   -- P1=0   -- percent of population starved per year on avg
   -- Z=0    -- year
   -- P=95   -- population
@@ -21,7 +32,7 @@ main = do
   -- A=H/Y  -- acres
   -- I=5    -- population growth
   -- Q=1
-  -- D=0    -- starved
+  -- D=0    -- starved per year
   -- C=0    -- a random number ???
   -- L=A/P  -- acres per person
 
@@ -39,3 +50,7 @@ main = do
 -- You now have 4592 bushels in store.
 -- 4592 bushels remaining
 -- Land is trading at 21 bushels per acre.
+
+-- [year, starved, population, growth, acres, yield, ratsAte, store]
+
+-- buy sell feed seed
