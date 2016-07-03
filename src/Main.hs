@@ -1,7 +1,14 @@
 module Main where
 
-turn' :: t -> t -> [t]
-turn' a b = [a, b]
+import System.Random
+
+rando :: IO Int
+rando = getStdRandom (randomR (1, 10))
+
+turn' :: Num t => t -> t -> t -> t -> [t]
+turn' a b c d = [x, c, d]
+  where x = a + b
+
 
 -- promptLine :: String -> IO String
 -- promptLine prompt = do
@@ -10,14 +17,19 @@ turn' a b = [a, b]
 
 main :: IO ()
 main = do
-  putStrLn "HAMURABI"
-  putStrLn "CREATIVE COMPUTING MORRISTOWN, NEW JERSEY"
-  putStrLn " "
-  putStrLn "TRY YOUR HAND AT GOVERNING ANCIENT SUMERIA"
-  putStrLn "FOR A TEN-YEAR TERM OF OFFICE."
-  line <- getLine
-  putStrLn ("FOR A " ++ line ++ " TERM")
-  print (turn' 1 2)
+  print $ turn' 1 2 3 4
+
+
+
+
+  -- putStrLn "HAMURABI"
+  -- putStrLn "CREATIVE COMPUTING MORRISTOWN, NEW JERSEY"
+  -- putStrLn " "
+  -- putStrLn "TRY YOUR HAND AT GOVERNING ANCIENT SUMERIA"
+  -- putStrLn "FOR A TEN-YEAR TERM OF OFFICE."
+  -- line <- getLine
+  -- putStrLn ("FOR A " ++ line ++ " TERM")
+  -- print (turn' 1 2)
 
 
 
