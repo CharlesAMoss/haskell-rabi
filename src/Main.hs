@@ -1,9 +1,17 @@
 module Main where
 
-import System.Random
+-- import System.Random
 
-rando :: IO Int
-rando = getStdRandom (randomR (1, 10))
+-- [year, starved, population, growth, acres, yield, ratsAte, store]
+
+inputed :: [Integer]
+inputed = [ 20, -5, 2000, 1015]
+
+city :: [Integer]
+city = [ 0, 0, 95, 5, 1000, 3, 200, 3000]
+
+-- rando :: IO Int
+-- rando = getStdRandom (randomR (1, 10))
 
 turn' :: Num t => t -> t -> t -> t -> [t]
 turn' a b c d = [x, c, d]
@@ -18,6 +26,9 @@ turn' a b c d = [x, c, d]
 main :: IO ()
 main = do
   print $ turn' 1 2 3 4
+  print city
+  let foo = inputed!!3
+  print foo
 
 
 
