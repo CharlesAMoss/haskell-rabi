@@ -1,6 +1,6 @@
 module Main where
 
--- import System.Random
+import System.Random
 
 -- [year, starved, population, growth, acres, yield, ratsAte, store]
 
@@ -10,25 +10,25 @@ inputed = [ 20, -5, 2000, 1015]
 city :: [Integer]
 city = [ 0, 0, 95, 5, 1000, 3, 200, 3000]
 
--- rando :: IO Int
--- rando = getStdRandom (randomR (1, 10))
-
-turn' :: Num t => t -> t -> t -> t -> [t]
-turn' a b c d = [x, c, d]
-  where x = a + b
-
-
--- promptLine :: String -> IO String
--- promptLine prompt = do
---     putStr prompt
---     getLine
+-- turn' :: Num t => t -> t -> t -> t -> [t]
+-- turn' a b c d = [x, c, d]
+--   where x = a + b
 
 main :: IO ()
 main = do
-  print $ turn' 1 2 3 4
-  print city
-  let foo = inputed!!3
-  print foo
+  gen <- getStdGen
+  let (n, _) = randomR(1, 10) gen :: (Int, StdGen)
+  let (g, _) = randomR(11, 20) gen :: (Int, StdGen)
+  print n
+  print g
+
+
+
+
+  -- print $ turn' 1 2 3 4
+  -- print city
+  -- let foo = inputed!!3
+  -- print foo
 
 
 
