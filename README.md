@@ -3,7 +3,7 @@
 ### by [Charles Moss](https://twitter.com/CharlesMoss)
 
 ## Description
-_Modeling HAMURABI ( from BASIC source ) in Haskell. The Goal of which is to learn about IO ( input / output ) in Haskell. Also explore randomness in functional programing _
+_Modeling HAMURABI ( from BASIC source ) in Haskell. The Goal of which is to learn about IO ( input / output ) in Haskell. Also explore randomness in functional programing_
 
 ## Setup
 _You will need to compile this code for it to run. Basically you need to install the "Haskell Platform" and run stack build then stack exec hammurabi._

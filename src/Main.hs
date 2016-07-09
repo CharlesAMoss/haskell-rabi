@@ -1,5 +1,6 @@
 module Main where
 
+import MyRandom
 import System.Random
 
 -- [year, starved, population, growth, acres, yield, ratsAte, store]
@@ -16,11 +17,25 @@ city = [ 0, 0, 95, 5, 1000, 3, 200, 3000]
 
 main :: IO ()
 main = do
-  gen <- getStdGen
-  let (n, _) = randomR(1, 10) gen :: (Int, StdGen)
-  let (g, _) = randomR(11, 20) gen :: (Int, StdGen)
-  print n
-  print g
+      putStrLn "HAMURABI"
+      putStrLn " "
+      let (n,_) = rollDie2
+      print n
+      print rollDie1
+      print rollDie2
+
+
+
+
+
+
+
+
+  -- gen <- getStdGen
+  -- let (n, _) = randomR(1, 10) gen :: (Int, StdGen)
+  -- let (g, _) = randomR(11, 20) gen :: (Int, StdGen)
+  -- print n
+  -- print g
 
 
 
