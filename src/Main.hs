@@ -20,11 +20,9 @@ main = do
   putStrLn "********"
   putStrLn "Hammurabi: I beg to report to you,"
   print $ "In Year " ++ show (city!!0) ++ ", " ++ show (city!!1) ++ " people starved."
-  print $ show (city!!3) ++ " people came to the city. The city population is now  " ++ show (city!!2 + city!!3) ++ "."
+  print $ show (city!!3) ++ " people came to the city. The city population is now " ++ show (city!!2 + city!!3) ++ "."
+  print $ "The city now owns " ++ show (city!!4) ++ " acres. You harvested " ++ show (city!!5) ++ " bushels per acre. Rats ate " ++ show (city!!6) ++ " bushels."
 
-
-
-  -- print show $ "In Year " ++ city!!0 ++ ", " ++ city!!1 ++ " people starved."
 
 
 
