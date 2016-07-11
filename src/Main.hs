@@ -1,7 +1,6 @@
 module Main where
 
 import MyRandom
-import System.Random
 
 -- [year, starved, population, growth, acres, yield, ratsAte, store]
 
@@ -17,27 +16,62 @@ city = [ 0, 0, 95, 5, 1000, 3, 200, 3000]
 
 main :: IO ()
 main = do
-      putStrLn "HAMURABI"
-      putStrLn " "
-      let (n,_) = rollDie2
-      print n
-      print rollDie1
-      print rollDie2
+  putStrLn "HAMURABI"
+  putStrLn "********"
+  putStrLn "Hammurabi: I beg to report to you,"
+  print $ "In Year " ++ show (city!!0) ++ ", " ++ show (city!!1) ++ " people starved."
+  print $ show (city!!3) ++ " people came to the city. The city population is now  " ++ show (city!!2 + city!!3) ++ "."
+
+
+
+  -- print show $ "In Year " ++ city!!0 ++ ", " ++ city!!1 ++ " people starved."
+
+
+
+  -- line <- getLine
+  -- let foo  = read line
+  -- let bar = city!!3
+  -- let foobar = show (foo + bar)
+  -- putStrLn ("FOR A " ++ foobar ++ " TERM")
+
+  -- "Hammurabi: I beg to report to you,"
+  -- "In Year " ++ show city!!0 ++ ", " ++ city!!0 ++ " people starved."
+  -- 4 people came to the city.
+  -- The city population is now 108.
+  -- The city now owns 840 acres.
+  -- You harvested 5 bushels per acre.
+  -- Rats ate 0 bushels.
+  -- You now have 4592 bushels in store.
+  -- 4592 bushels remaining
+  -- Land is trading at 21 bushels per acre.
 
 
 
 
 
+  -- putStrLn "HAMURABI"
+  -- putStrLn "CREATIVE COMPUTING MORRISTOWN, NEW JERSEY"
+  -- putStrLn " "
+  -- putStrLn "TRY YOUR HAND AT GOVERNING ANCIENT SUMERIA"
+  -- putStrLn "FOR A TEN-YEAR TERM OF OFFICE."
+  -- line <- getLine
+  -- putStrLn ("FOR A " ++ line ++ " TERM")
+  -- print (turn' 1 2)
 
 
+
+      -- putStrLn "HAMURABI"
+      -- putStrLn " "
+      -- let (n,_) = rollDie2
+      -- print n
+      -- print rollDie1
+      -- print rollDie2
 
   -- gen <- getStdGen
   -- let (n, _) = randomR(1, 10) gen :: (Int, StdGen)
   -- let (g, _) = randomR(11, 20) gen :: (Int, StdGen)
   -- print n
   -- print g
-
-
 
 
   -- print $ turn' 1 2 3 4
