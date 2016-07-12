@@ -10,6 +10,10 @@ inputed = [ 20, -5, 2000, 1015]
 city :: [Integer]
 city = [ 0, 0, 95, 5, 1000, 3, 200, 3000]
 
+report :: (Num a, Show a) => [a] -> IO ()
+report stats = do
+  putStrLn $ "Hammurabi: I beg to report to you," ++ "\n" ++ "In Year " ++ show (stats!!0) ++ ", " ++ show (stats!!1) ++ " people starved." ++ "\n" ++ show (stats!!3) ++ " people came to the city. The city population is now " ++ show (stats!!2 + stats!!3) ++ "." ++ "\n" ++ "The city now owns " ++ show (stats!!4) ++ " acres. You harvested " ++ show (stats!!5) ++ " bushels per acre." ++ "\n" ++ "Rats ate " ++ show (stats!!6) ++ " bushels. You now have " ++ show (stats!!7) ++ " bushels in store." ++ "\n"
+
 -- turn' :: Num t => t -> t -> t -> t -> [t]
 -- turn' a b c d = [x, c, d]
 --   where x = a + b
@@ -18,13 +22,22 @@ main :: IO ()
 main = do
   putStrLn "HAMURABI"
   putStrLn "********"
-  putStrLn "Hammurabi: I beg to report to you,"
-  print $ "In Year " ++ show (city!!0) ++ ", " ++ show (city!!1) ++ " people starved."
-  print $ show (city!!3) ++ " people came to the city. The city population is now " ++ show (city!!2 + city!!3) ++ "."
-  print $ "The city now owns " ++ show (city!!4) ++ " acres. You harvested " ++ show (city!!5) ++ " bushels per acre. Rats ate " ++ show (city!!6) ++ " bushels."
+  report city
 
 
 
+
+
+
+  -- print $ "Hammurabi: I beg to report to you,"
+  -- print $ "In Year " ++ show (city!!0) ++ ", " ++ show (city!!1) ++ " people starved."
+  -- print $ show (city!!3) ++ " people came to the city. The city population is now " ++ show (city!!2 + city!!3) ++ "."
+  -- print $ "The city now owns " ++ show (city!!4) ++ " acres. You harvested " ++ show (city!!5) ++ " bushels per acre."
+  -- print $ "Rats ate " ++ show (city!!6) ++ " bushels. You now have " ++ show (city!!7) ++ " bushels in store."
+
+  -- You now have 4592 bushels in store.
+  -- 4592 bushels remaining
+  -- Land is trading at 21 bushels per acre.
 
   -- line <- getLine
   -- let foo  = read line
