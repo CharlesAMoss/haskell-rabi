@@ -12,7 +12,7 @@ city = [ 0, 0, 95, 5, 1000, 3, 200, 3000]
 
 report :: (Num a, Show a) => [a] -> IO ()
 report stats = do
-  putStrLn $ "Hammurabi: I beg to report to you," ++ "\n" ++ "In Year " ++ show (stats!!0) ++ ", " ++ show (stats!!1) ++ " people starved." ++ "\n" ++ show (stats!!3) ++ " people came to the city. The city population is now " ++ show (stats!!2 + stats!!3) ++ "." ++ "\n" ++ "The city now owns " ++ show (stats!!4) ++ " acres. You harvested " ++ show (stats!!5) ++ " bushels per acre." ++ "\n" ++ "Rats ate " ++ show (stats!!6) ++ " bushels. You now have " ++ show (stats!!7) ++ " bushels in store." ++ "\n"
+  putStrLn $ "Hammurabi: I beg to report to you," ++ "\n" ++ "In Year " ++ show (stats!!0) ++ ", " ++ show (stats!!1) ++ " people starved." ++ "\n" ++ show (stats!!3) ++ " people came to the city. The city population is now " ++ show (stats!!2 + stats!!3) ++ "." ++ "\n" ++ "The city now owns " ++ show (stats!!4) ++ " acres. You harvested " ++ show (stats!!5) ++ " bushels per acre." ++ "\n" ++ "Rats ate " ++ show (stats!!6) ++ " bushels. You now have " ++ show (stats!!7 - stats!!6) ++ " bushels in store." ++ "\n"
 
 -- turn' :: Num t => t -> t -> t -> t -> [t]
 -- turn' a b c d = [x, c, d]
@@ -23,6 +23,17 @@ main = do
   putStrLn "HAMURABI"
   putStrLn "********"
   report city
+  putStrLn "********"
+  putStrLn $ "Hammurabi, land is trading at " ++ show (city!!5) ++ " bushels per acre."
+  putStrLn "Hammurabi, How many bushels will you trade?"
+  trade <- getLine
+  putStrLn "Hammurabi, how much will you feed your people?"
+  feed <- getLine
+  putStrLn "Hammurabi, how many acres will you seed?"
+  seed <- getLine
+  print $ [trade, feed, seed]
+
+
 
 
 
